@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#navlinks li a.active {
+  background-color: #1c1c33 !important;
+}
+#navlinks li a:hover {
+  color: #a6a6b3 !important;
+}
