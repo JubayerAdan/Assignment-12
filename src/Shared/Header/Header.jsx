@@ -19,7 +19,7 @@ const Header = () => {
   );
   return (
     <div>
-      <div className="navbar bg-opacity-80 max-w-screen-xl bg-[#00051a07]">
+      <div className="navbar bg-opacity-80  bg-[#00051a07]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

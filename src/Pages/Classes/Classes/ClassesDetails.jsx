@@ -18,14 +18,14 @@ const ClassesDetails = () => {
     book.filter((book) => book.bookedClass == pid.id).length > 0;
   const bookNow = async () => {
     const newBookCard = {
-      email: user.email,
+      email: user?.email,
       name: card.name,
       image: card.image,
       bookedClass: card._id,
       entry_fee: card.entry_fee,
     };
     const result = await axios
-      .post("http://localhost:5000/book", newBookCard)
+      .post("https://mistitsu-server.vercel.app/book", newBookCard)
       .then((data) => {
         console.log(data.data);
         if (data.data.insertedId) {

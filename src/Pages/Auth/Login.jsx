@@ -23,7 +23,7 @@ const Login = () => {
     signIn(email, password).then((result) => {
       const user = result.user;
       navigate(from, { replace: true });
-      if (!user.emailVerified) {
+      if (!user?.emailVerified) {
         logOut();
         Swal.fire({
           title: "Your account is not verified",
@@ -44,7 +44,7 @@ const Login = () => {
           }
         });
       }
-      if (user.emailVerified) {
+      if (user?.emailVerified) {
         navigate(from, { replace: true });
         console.log(user);
       }

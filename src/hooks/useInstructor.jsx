@@ -6,7 +6,9 @@ const useInstructor = (query) => {
     queryKey: ["instructors", query],
     queryFn: async () => {
       const response = await fetch(
-        `http://localhost:5000/instructors${query ? `?quantity=${query}` : ""}`
+        `https://mistitsu-server.vercel.app/instructors${
+          query ? `?quantity=${query}` : ""
+        }`
       );
       const data = await response.json();
       return data;

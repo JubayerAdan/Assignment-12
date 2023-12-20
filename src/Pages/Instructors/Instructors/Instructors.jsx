@@ -16,7 +16,7 @@ const Instructors = () => {
   const { user } = useAuth();
   const [dbUser] = useUser();
   useEffect(() => {
-    const currentUser = dbUser.find((us) => us.email == user.email);
+    const currentUser = dbUser.find((us) => us.email == user?.email);
     setCurrent(currentUser);
   }, [dbUser]);
   console.log(dbUser);

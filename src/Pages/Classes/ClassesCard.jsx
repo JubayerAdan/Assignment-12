@@ -14,12 +14,12 @@ const ClassesCard = ({ card, instructor }) => {
     50 - bookings[0].filter((book) => book.bookedClass == card._id).length;
   const bookedDisable =
     bookingsEmail[0].filter(
-      (book) => book.bookedClass == card._id && book.email == user.email
+      (book) => book.bookedClass == card._id && book.email == user?.email
     ).length > 0;
   console.log(
     "email check",
     bookingsEmail[0].filter(
-      (book) => book.bookedClass == card._id && book.email == user.email
+      (book) => book.bookedClass == card._id && book.email == user?.email
     )
   );
   const isnotLogged = () => {

@@ -11,7 +11,7 @@ const useIsAdmin = () => {
     const checkAdminStatus = async () => {
       try {
         const result = await axiosPublic(
-          `/users/${user.email}?apikey=ee30bfd7-9b83-4b5a-ad34-ccf526010ac9`
+          `/users/${user?.email}?apikey=ee30bfd7-9b83-4b5a-ad34-ccf526010ac9`
         );
         setIsAdmin(result.data.admin === true);
       } catch (error) {
@@ -21,7 +21,7 @@ const useIsAdmin = () => {
     };
 
     checkAdminStatus();
-  }, [axiosPublic, user.email]);
+  }, [axiosPublic, user?.email]);
 
   return isAdmin;
 };

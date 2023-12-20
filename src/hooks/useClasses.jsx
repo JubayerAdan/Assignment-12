@@ -5,7 +5,9 @@ const useClasses = (query) => {
     queryKey: ["classes", query],
     queryFn: async () => {
       const response = await fetch(
-        `http://localhost:5000/classes${query ? `?quantity=${query}` : ""}`
+        `https://mistitsu-server.vercel.app/classes${
+          query ? `?quantity=${query}` : ""
+        }`
       );
       const data = await response.json();
       return data;

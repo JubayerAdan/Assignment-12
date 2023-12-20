@@ -9,7 +9,9 @@ const useBook = (isPublic) => {
     queryKey: ["cart", user?.email],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:5000/book${!isPublic ? "?email=" + user.email : ""}`
+        `https://mistitsu-server.vercel.app/book${
+          !isPublic ? "?email=" + user?.email : ""
+        }`
       );
       return res.data;
     },

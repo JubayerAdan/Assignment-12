@@ -32,12 +32,12 @@ export const router = createBrowserRouter([
         path: "/instructors/:id",
         element: <InstructorsDetails></InstructorsDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/instructors/${params.id}`),
+          fetch(`https://mistitsu-server.vercel.app/instructors/${params.id}`),
       },
       {
         path: "/instructors",
         element: <Instructors></Instructors>,
-        loader: () => fetch(`http://localhost:5000/instructors`),
+        loader: () => fetch(`https://mistitsu-server.vercel.app/instructors`),
       },
       {
         path: "/classes",
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/classes/${params.id}`),
+          fetch(`https://mistitsu-server.vercel.app/classes/${params.id}`),
       },
     ],
   },
