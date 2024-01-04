@@ -16,7 +16,9 @@ import {
 const AdminHome = () => {
   const [stats, setStats] = useState();
   useEffect(() => {
-    axios.get("http://localhost:5000/stats").then((res) => setStats(res.data));
+    axios
+      .get("https://mistitsu-server.vercel.app/stats")
+      .then((res) => setStats(res.data));
   }, []);
 
   return (
