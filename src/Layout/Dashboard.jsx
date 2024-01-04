@@ -41,7 +41,7 @@ const Dashboard = () => {
             >
               <h4 className="text-3xl font-bold my-2 mx-3">Mystitsu</h4>
               <li className="text-white font-semibold text-[15px]">
-                <NavLink to="/dashboard/home">
+                <NavLink to="/dashboard/adminhome">
                   <FaLaptopHouse className="text-lg"></FaLaptopHouse>
                   Admin Home
                 </NavLink>

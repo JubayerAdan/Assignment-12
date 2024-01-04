@@ -19,6 +19,8 @@ import AllInstructor from "../Pages/Dashboard/AllInstructor.jsx";
 import AllClasses from "../Pages/Dashboard/AllClasses.jsx";
 import AddClass from "../Pages/Dashboard/AddClass.jsx";
 import AddInstructor from "../Pages/Dashboard/AddInstructor.jsx";
+import AdminRoutes from "./AdminRoutes.jsx";
+import AdminHome from "../Pages/Dashboard/AdminHome.jsx";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -81,27 +83,59 @@ export const router = createBrowserRouter([
       },
       {
         path: "users",
-        element: <Users></Users>,
+        element: (
+          <AdminRoutes>
+            <Users></Users>
+          </AdminRoutes>
+        ),
       },
       {
         path: "adminbooking",
-        element: <AdminBooking></AdminBooking>,
+        element: (
+          <AdminRoutes>
+            <AdminBooking></AdminBooking>
+          </AdminRoutes>
+        ),
       },
       {
         path: "allinstrustor",
-        element: <AllInstructor></AllInstructor>,
+        element: (
+          <AdminRoutes>
+            <AllInstructor></AllInstructor>
+          </AdminRoutes>
+        ),
       },
       {
         path: "allclasses",
-        element: <AllClasses></AllClasses>,
+        element: (
+          <AdminRoutes>
+            <AllClasses></AllClasses>
+          </AdminRoutes>
+        ),
       },
       {
         path: "addclass",
-        element: <AddClass></AddClass>,
+        element: (
+          <AdminRoutes>
+            <AddClass></AddClass>
+          </AdminRoutes>
+        ),
       },
       {
         path: "addinstructor",
-        element: <AddInstructor></AddInstructor>,
+        element: (
+          <AdminRoutes>
+            <AddInstructor></AddInstructor>
+          </AdminRoutes>
+        ),
+      },
+      {
+        path: "adminhome",
+        element: (
+          <AdminRoutes>
+            <AdminHome></AdminHome>
+          </AdminRoutes>
+        ),
       },
     ],
   },

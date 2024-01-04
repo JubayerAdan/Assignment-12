@@ -3,6 +3,7 @@ import useAuth from "../hooks/useAuth";
 import useUser from "../hooks/useUser";
 import { Navigate } from "react-router-dom";
 import useIsAdmin from "../hooks/useIsAdmin";
+import FourZeroThree from "../components/FourZeroThree";
 
 const AdminRoutes = ({ children }) => {
   const { user, loading: authLoading } = useAuth();
@@ -22,14 +23,14 @@ const AdminRoutes = ({ children }) => {
   }
 
   if (!isAdmin) {
-    return <Navigate to="/" />;
+    return <FourZeroThree></FourZeroThree>;
   }
 
   if (isAdmin) {
     return children;
   }
 
-  return null; // Default case, if none of the conditions match
+  return null;
 };
 
 export default AdminRoutes;
